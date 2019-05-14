@@ -1,24 +1,13 @@
-HOST=127.0.0.1
-TEST_PATH=./
+(PYTHON_VERSION)=/usr/bin/python3.6
 
+test:
+	python manage.py test
 
-clean-build:
-    rm --force --recursive build/
-    rm --force --recursive dist/
-    rm --force --recursive *.egg-info
-
-isort:
-    sh -c "isort --skip-glob=.tox --recursive . "
-
-lint:
-    flake8 --exclude=.tox
-
-test: clean-pyc
-    py.test --verbose --color=yes $(TEST_PATH)
+install:
+	virtualenv --python=$(PYTHON_VERSION) venv_sheets
+	. venv_sheets/bin/activate
+	pip install -r requirements.txt
 
 run:
-    python3.6 -m venv venv_sheets
-    activate venv_sheets/bin/activate\
-    pip install -r requirements.txt
-    python manage.py loaddata base.json
-    python manage.py runserver
+	python manage.py loaddata base.json
+	python manage.py runserver
