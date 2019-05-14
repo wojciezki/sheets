@@ -1,0 +1,323 @@
+[
+{
+    "model": "sheets.user",
+    "pk": 1,
+    "fields": {
+        "password": "pbkdf2_sha256$150000$5ykD8vxmIUu4$bAYfpm9eh3dpLmVMiqWA4rBEcUnCNDhJJ/zgzbZ78js=",
+        "last_login": "2019-05-14T15:08:44.382Z",
+        "is_superuser": true,
+        "username": "michal",
+        "first_name": "",
+        "last_name": "",
+        "email": "test@test.com",
+        "is_staff": true,
+        "is_active": true,
+        "date_joined": "2019-05-14T15:07:34.937Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "sheets.user",
+    "pk": 2,
+    "fields": {
+        "password": "pbkdf2_sha256$150000$TcSpiIgGDfcP$6j0fQsbUM+QHUP/Yc50sLLzcPMaWk94XND/NYWGDb3w=",
+        "last_login": "2019-05-14T15:08:24.136Z",
+        "is_superuser": false,
+        "username": "wojtek",
+        "first_name": "",
+        "last_name": "",
+        "email": "testtt@test.com",
+        "is_staff": false,
+        "is_active": true,
+        "date_joined": "2019-05-14T15:08:23.969Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "sheets.examsheet",
+    "pk": 1,
+    "fields": {
+        "created": "2019-05-14T15:08:59.182Z",
+        "edited": "2019-05-14T15:08:59.182Z",
+        "creator": 1,
+        "editor": null,
+        "template": true,
+        "name": "ExamTemplate"
+    }
+},
+{
+    "model": "sheets.examsheet",
+    "pk": 2,
+    "fields": {
+        "created": "2019-05-14T15:18:22.674Z",
+        "edited": "2019-05-14T15:36:45.074Z",
+        "creator": 1,
+        "editor": null,
+        "template": false,
+        "name": "ExamTemplate"
+    }
+},
+{
+    "model": "sheets.task",
+    "pk": 1,
+    "fields": {
+        "created": "2019-05-14T15:09:27.801Z",
+        "edited": "2019-05-14T15:11:35.141Z",
+        "creator": 1,
+        "editor": 1,
+        "type": "MULTI_CHOICE",
+        "max_grade": null,
+        "question": "compute: 2+2=x?",
+        "exam_sheet": [
+            1,
+            2
+        ]
+    }
+},
+{
+    "model": "sheets.task",
+    "pk": 2,
+    "fields": {
+        "created": "2019-05-14T15:09:49.961Z",
+        "edited": "2019-05-14T15:12:02.010Z",
+        "creator": 1,
+        "editor": 1,
+        "type": "TRUE_FALSE",
+        "max_grade": null,
+        "question": "compute: 65 * 10 = x",
+        "exam_sheet": [
+            1,
+            2
+        ]
+    }
+},
+{
+    "model": "sheets.task",
+    "pk": 3,
+    "fields": {
+        "created": "2019-05-14T15:10:39.629Z",
+        "edited": "2019-05-14T15:13:04.878Z",
+        "creator": 1,
+        "editor": 1,
+        "type": "MULTI_CHOICE",
+        "max_grade": null,
+        "question": "compute: 2^2=x",
+        "exam_sheet": [
+            1,
+            2
+        ]
+    }
+},
+{
+    "model": "sheets.solution",
+    "pk": 1,
+    "fields": {
+        "created": "2019-05-14T15:13:55.122Z",
+        "edited": "2019-05-14T15:13:55.122Z",
+        "creator": 1,
+        "editor": null,
+        "task": 1,
+        "text_answer": "4",
+        "choice_answer": true,
+        "points": 2
+    }
+},
+{
+    "model": "sheets.solution",
+    "pk": 2,
+    "fields": {
+        "created": "2019-05-14T15:14:06.186Z",
+        "edited": "2019-05-14T15:14:28.670Z",
+        "creator": 1,
+        "editor": 1,
+        "task": 1,
+        "text_answer": "10",
+        "choice_answer": false,
+        "points": 2
+    }
+},
+{
+    "model": "sheets.solution",
+    "pk": 3,
+    "fields": {
+        "created": "2019-05-14T15:14:14.470Z",
+        "edited": "2019-05-14T15:14:14.470Z",
+        "creator": 1,
+        "editor": null,
+        "task": 1,
+        "text_answer": "6",
+        "choice_answer": false,
+        "points": 2
+    }
+},
+{
+    "model": "sheets.solution",
+    "pk": 4,
+    "fields": {
+        "created": "2019-05-14T15:14:49.959Z",
+        "edited": "2019-05-14T15:14:49.959Z",
+        "creator": 1,
+        "editor": null,
+        "task": 2,
+        "text_answer": "65",
+        "choice_answer": false,
+        "points": 10
+    }
+},
+{
+    "model": "sheets.solution",
+    "pk": 5,
+    "fields": {
+        "created": "2019-05-14T15:15:09.919Z",
+        "edited": "2019-05-14T15:15:09.919Z",
+        "creator": 1,
+        "editor": null,
+        "task": 3,
+        "text_answer": "122",
+        "choice_answer": false,
+        "points": 2
+    }
+},
+{
+    "model": "sheets.solution",
+    "pk": 6,
+    "fields": {
+        "created": "2019-05-14T15:15:54.850Z",
+        "edited": "2019-05-14T15:15:54.850Z",
+        "creator": 1,
+        "editor": null,
+        "task": 3,
+        "text_answer": "4",
+        "choice_answer": true,
+        "points": 2
+    }
+},
+{
+    "model": "sheets.solution",
+    "pk": 7,
+    "fields": {
+        "created": "2019-05-14T15:16:05.329Z",
+        "edited": "2019-05-14T15:16:05.329Z",
+        "creator": 1,
+        "editor": null,
+        "task": 3,
+        "text_answer": "65",
+        "choice_answer": false,
+        "points": 2
+    }
+},
+{
+    "model": "sheets.answer",
+    "pk": 1,
+    "fields": {
+        "created": "2019-05-14T15:18:22.645Z",
+        "edited": "2019-05-14T15:18:22.645Z",
+        "creator": 1,
+        "editor": null,
+        "task": 1,
+        "text_answer": null,
+        "choice_answer": true,
+        "submit": true,
+        "grade": null,
+        "solution": 1
+    }
+},
+{
+    "model": "sheets.answer",
+    "pk": 2,
+    "fields": {
+        "created": "2019-05-14T15:34:53.258Z",
+        "edited": "2019-05-14T15:38:55.613Z",
+        "creator": 1,
+        "editor": 1,
+        "task": 1,
+        "text_answer": null,
+        "choice_answer": false,
+        "submit": true,
+        "grade": null,
+        "solution": 2
+    }
+},
+{
+    "model": "sheets.answer",
+    "pk": 3,
+    "fields": {
+        "created": "2019-05-14T15:34:57.740Z",
+        "edited": "2019-05-14T15:39:11.620Z",
+        "creator": 1,
+        "editor": 1,
+        "task": 1,
+        "text_answer": null,
+        "choice_answer": false,
+        "submit": true,
+        "grade": null,
+        "solution": 3
+    }
+},
+{
+    "model": "sheets.answer",
+    "pk": 4,
+    "fields": {
+        "created": "2019-05-14T15:36:14.015Z",
+        "edited": "2019-05-14T15:39:26.353Z",
+        "creator": 1,
+        "editor": 1,
+        "task": 2,
+        "text_answer": null,
+        "choice_answer": false,
+        "submit": true,
+        "grade": null,
+        "solution": 4
+    }
+},
+{
+    "model": "sheets.answer",
+    "pk": 5,
+    "fields": {
+        "created": "2019-05-14T15:36:33.139Z",
+        "edited": "2019-05-14T15:36:33.139Z",
+        "creator": 1,
+        "editor": null,
+        "task": 3,
+        "text_answer": null,
+        "choice_answer": true,
+        "submit": true,
+        "grade": null,
+        "solution": 5
+    }
+},
+{
+    "model": "sheets.answer",
+    "pk": 6,
+    "fields": {
+        "created": "2019-05-14T15:36:39.264Z",
+        "edited": "2019-05-14T15:36:39.264Z",
+        "creator": 1,
+        "editor": null,
+        "task": 3,
+        "text_answer": null,
+        "choice_answer": false,
+        "submit": true,
+        "grade": null,
+        "solution": 6
+    }
+},
+{
+    "model": "sheets.answer",
+    "pk": 7,
+    "fields": {
+        "created": "2019-05-14T15:36:45.058Z",
+        "edited": "2019-05-14T15:36:45.058Z",
+        "creator": 1,
+        "editor": null,
+        "task": 3,
+        "text_answer": null,
+        "choice_answer": false,
+        "submit": true,
+        "grade": null,
+        "solution": 7
+    }
+}
+]
